@@ -23,3 +23,7 @@ Open it in the [Expo app](https://expo.io) on your phone to view it. It will rel
     <td valign="top"><img src="https://user-images.githubusercontent.com/46753824/115718467-6bcf8880-a37b-11eb-999a-9e245c495010.PNG"/></td>
   </tr>
 </table>
+
+
+Fruit facts from Fruit Ninja game, retrieved from [Fruit Facts API](https://fruitninjafacts.fandom.com/wiki/Sensei%27s_fruit_facts).
+Used [TacoFancy API](https://github.com/evz/tacofancy-api) for Recipes.
