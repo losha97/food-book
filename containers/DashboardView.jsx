@@ -5,6 +5,13 @@ import { ErrorService } from '../services/ErrorService'
 
 const DashboardView = props => {
   const dashboard = [{
+    name: "Fruit Facts",
+    view: "FruitView",
+    icon: "leaf",
+    iconColor: "#DFE0DF",
+    background: "#AC8B67",
+    styleIcon: { color: "#DFE0DF" }
+  }, {
     name: "Recipes",
     view: "RecipesListView",
     icon: "star",
