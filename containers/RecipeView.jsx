@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { ActivityIndicator, ScrollView, SafeAreaView, StyleSheet, Text, View, TextInput } from 'react-native'
+import { ActivityIndicator, ScrollView, SafeAreaView, StyleSheet, View } from 'react-native'
 import { ErrorService } from '../services/ErrorService'
 import { SupportService } from '../services/SupportService'
 import Recipe from '../components/Recipe'

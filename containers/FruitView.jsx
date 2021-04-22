@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Dashboard from 'react-native-dashboard';
+import Dashboard from 'react-native-dashboard'
 import { StyleSheet, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { ErrorService } from '../services/ErrorService'
 import { FruitAPI } from '../api/services/FruitAPI'

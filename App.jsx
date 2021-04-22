@@ -95,7 +95,7 @@ export default function App() {
               name="MainView"
               component={MainView}
               options={{
-                title: "Recipes Book",
+                title: "Food Book",
                 headerStyle: {
                   backgroundColor: "#FFA400"
                 },

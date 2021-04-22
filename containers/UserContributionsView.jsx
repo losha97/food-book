@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ActivityIndicator, Image, ScrollView, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, ScrollView, SafeAreaView, StyleSheet, View } from 'react-native'
 import { Cell, Section, TableView } from 'react-native-tableview-simple'
 import { ErrorService } from '../services/ErrorService'
 import { SupportService } from '../services/SupportService'

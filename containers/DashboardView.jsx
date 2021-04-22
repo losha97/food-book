@@ -1,6 +1,6 @@
 import React from 'react'
 import Dashboard from 'react-native-dashboard';
-import { StyleSheet, Text, SafeAreaView, TouchableOpacity } from 'react-native'
+import { StyleSheet, SafeAreaView } from 'react-native'
 import { ErrorService } from '../services/ErrorService'
 
 const DashboardView = props => {

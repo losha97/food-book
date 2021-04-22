@@ -16,7 +16,7 @@ const LoginView = props => {
       <TouchableOpacity style={styles.mainCircle} onPress={onStart}>
         <View style={styles.middleCicrle}>
           <View style={styles.textCicrle}>
-            <Text style={styles.text}>RECIPES</Text>
+            <Text style={styles.text}>START</Text>
           </View>
         </View>
       </TouchableOpacity>

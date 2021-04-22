@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { ActivityIndicator, FlatList, SafeAreaView, StyleSheet, Switch, Text, View, TextInput, TouchableOpacity } from 'react-native'
+import { ActivityIndicator, FlatList, SafeAreaView, StyleSheet, Switch, Text, View, TouchableOpacity } from 'react-native'
 import { ErrorService } from '../services/ErrorService'
 import { SupportService } from '../services/SupportService'
 import Recipe from '../components/Recipe'
@@ -45,9 +45,7 @@ const RecipesListView = props => {
     <TouchableOpacity
       key={item.name}
       style={styles.recipeContainer}
-      onPress={() => onNavigateTo('RecipeView', {
-        recipe: item
-      })}
+      onPress={() => onNavigateTo('RecipeView', { recipe: item })}
     >
       <Recipe recipe={item} showMiniVersion />
     </TouchableOpacity>
