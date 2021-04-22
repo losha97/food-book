@@ -1,11 +1,10 @@
 import React from 'react'
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import { Alert, StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
 import { ErrorService } from '../services/ErrorService'
 
 const LoginView = props => {
   const onStart = () => {
-    navigateTo('RecipesListView')
+    navigateTo('DashboardView')
   }
 
   const navigateTo = screen => {
