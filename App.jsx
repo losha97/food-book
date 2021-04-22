@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import ContributorListView from './containers/ContributorListView'
 import DashboardView from './containers/DashboardView'
+import FruitView from './containers/FruitView'
 import RecipeView from './containers/RecipeView'
 import RecipesListView from './containers/RecipesListView'
 import MainView from './containers/MainView'
@@ -40,6 +41,17 @@ export default function App() {
               component={DashboardView}
               options={{
                 title: "Dashboard",
+                headerStyle: {
+                  backgroundColor: "#FFA400"
+                },
+                headerTintColor: "#5F4119"
+              }}
+            />
+            <Stack.Screen
+              name="FruitView"
+              component={FruitView}
+              options={{
+                title: "Fruit Facts",
                 headerStyle: {
                   backgroundColor: "#FFA400"
                 },
