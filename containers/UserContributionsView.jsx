@@ -5,6 +5,7 @@ import { ErrorService } from '../services/ErrorService'
 import { SupportService } from '../services/SupportService'
 import NotFound from '../components/NotFound'
 import { RecipeAPI } from '../api/services/RecipeAPI'
+import * as Constants from '../constants'
 
 const UserContributionsView = props => {
   const [ contributions, setContributions] = useState(undefined)
@@ -26,7 +27,7 @@ const UserContributionsView = props => {
   }
 
   const capitalize = str => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+    return str.charAt(0).toUpperCase() + str.slice(1)
   }
 
   return (
@@ -35,16 +36,16 @@ const UserContributionsView = props => {
         !!Object.keys(contributions).length ? (
           <ScrollView>
             {Object.keys(contributions).map(contributionId => {
-              return Array.isArray(contributions[contributionId]) ? (
+              let contribution = contributions[contributionId];
+              return Array.isArray(contribution) && !!contribution.length ? (
                 <TableView appearance="light" key={contributionId}>
                   <Section header={capitalize(contributionId)}>
-                    {contributions[contributionId]
-                      .map((contribution, contributionIndex) => {
+                    {contribution.map((contribution, contributionIndex) => {
                       return (
                         <Cell
                           key={contributionIndex}
                           title={contribution}
-                          titleTextColor="#2F4858"
+                          titleTextColor={Constants.COLOR.BLACK_LIGHT}
                         />
                       )
                     })}
@@ -56,17 +57,17 @@ const UserContributionsView = props => {
         ) : <NotFound message="No contributions found" />
       ) : (
         <View style={styles.indicator}>
-          <ActivityIndicator size="large" color="#FFA400" />
+          <ActivityIndicator size="large" color={Constants.COLOR.ORANGE} />
         </View>
       )}
     </SafeAreaView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F4F4F4"
+    backgroundColor: Constants.COLOR.GRAY_LIGHT
   },
   contributorsContainer: {
     flex: 1,

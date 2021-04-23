@@ -4,6 +4,7 @@ import { ErrorService } from '../services/ErrorService'
 import { SupportService } from '../services/SupportService'
 import Recipe from '../components/Recipe'
 import { RecipeAPI } from '../api/services/RecipeAPI'
+import * as Constants from '../constants'
 
 const RecipesListView = props => {
   const [ recipes, setRecipes ] = useState(undefined)
@@ -55,9 +56,9 @@ const RecipesListView = props => {
     <SafeAreaView style={styles.container}>
       <View style={styles.switcherContainer}>
         <Switch
-          trackColor={{ false: "#5F4119", true: "#FFA400" }}
-          thumbColor={"#FFF"}
-          ios_backgroundColor="#5F4119"
+          trackColor={{ false: Constants.COLOR.BROWN, true: Constants.COLOR.ORANGE }}
+          thumbColor={Constants.COLOR.WHITE}
+          ios_backgroundColor={Constants.COLOR.BROWN}
           onValueChange={toggleSwitch}
           value={isEnabled}
           style={styles.switcher}
@@ -73,7 +74,7 @@ const RecipesListView = props => {
         />
       ) : (
         <View style={styles.indicator}>
-          <ActivityIndicator size="large" color="#FFA400" />
+          <ActivityIndicator size="large" color={Constants.COLOR.ORANGE} />
         </View>
       )}
     </SafeAreaView>
@@ -83,7 +84,7 @@ const RecipesListView = props => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F4F4F4",
+    backgroundColor: Constants.COLOR.GRAY_LIGHT,
     alignItems: "center"
   },
   switcherContainer: {
@@ -100,10 +101,9 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   recipeContainer: {
-    borderColor: "#615F4E",
     paddingVertical: 20,
     alignItems: "center",
-    backgroundColor: "#FFF",
+    backgroundColor: Constants.COLOR.WHITE,
     marginBottom: 10,
     borderRadius: 20
   },

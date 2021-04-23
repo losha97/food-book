@@ -4,6 +4,7 @@ import { ErrorService } from '../services/ErrorService'
 import { SupportService } from '../services/SupportService'
 import Recipe from '../components/Recipe'
 import { RecipeAPI } from '../api/services/RecipeAPI'
+import * as Constants from '../constants'
 
 const RecipeView = props => {
   const [ recipe, setRecipe ] = useState(props.route.params.recipe)
@@ -26,7 +27,7 @@ const RecipeView = props => {
         </ScrollView>
       ) : (
         <View style={styles.indicator}>
-          <ActivityIndicator size="large" color="#FFA400" />
+          <ActivityIndicator size="large" color={Constants.COLOR.ORANGE} />
         </View>
       )}
     </SafeAreaView>
@@ -36,7 +37,7 @@ const RecipeView = props => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F4F4F4",
+    backgroundColor: Constants.COLOR.GRAY_LIGHT,
     alignItems: "center",
   },
   indicator: {
@@ -46,10 +47,9 @@ const styles = StyleSheet.create({
   },
   recipeContainer: {
     flex: 1,
-    borderColor: "#615F4E",
     paddingVertical: 20,
     alignItems: "center",
-    backgroundColor: "#FFF",
+    backgroundColor: Constants.COLOR.WHITE,
     marginTop: 10,
     marginBottom: 10,
     borderRadius: 20

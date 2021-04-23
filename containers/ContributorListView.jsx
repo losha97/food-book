@@ -5,11 +5,11 @@ import { ErrorService } from '../services/ErrorService'
 import { SupportService } from '../services/SupportService'
 import NotFound from '../components/NotFound'
 import { RecipeAPI } from '../api/services/RecipeAPI'
+import * as Constants from '../constants'
 
 const ContributorListView = props => {
   const [ contributors, setContributors ] = useState(undefined)
   const [ error, setError ] = useState(false)
-  console.log(props)
   const recipeName = props.route.params.recipeName
   const recipeType = props.route.params.recipeType
   const recipeSlug = props.route.params.recipeSlug
@@ -56,7 +56,7 @@ const ContributorListView = props => {
                           }}
                         />
                       }
-                      titleTextColor="#2F4858"
+                      titleTextColor={Constants.COLOR.BLACK_LIGHT}
                       onPress={() => onUserPress(contributor.username)}
                     />
                   )
@@ -67,17 +67,17 @@ const ContributorListView = props => {
         ) : <NotFound message="No contributors found" />
       ) : (
         <View style={styles.indicator}>
-          <ActivityIndicator size="large" color="#FFA400" />
+          <ActivityIndicator size="large" color={Constants.COLOR.ORANGE} />
         </View>
       )}
     </SafeAreaView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F4F4F4"
+    backgroundColor: Constants.COLOR.GRAY_LIGHT
   },
   contributorsContainer: {
     flex: 1,
