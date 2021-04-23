@@ -10,6 +10,7 @@ import RecipeView from './containers/RecipeView'
 import RecipesListView from './containers/RecipesListView'
 import MainView from './containers/MainView'
 import UserContributionsView from './containers/UserContributionsView'
+import * as Constants from './constants'
 
 import useCachedResources from './hooks/useCachedResources'
 import useColorScheme from './hooks/useColorScheme'
@@ -31,9 +32,9 @@ export default function App() {
               options={{
                 title: "Contributors",
                 headerStyle: {
-                  backgroundColor: "#FFA400"
+                  backgroundColor: Constants.COLOR.ORANGE
                 },
-                headerTintColor: "#5F4119"
+                headerTintColor: Constants.COLOR.BROWN
               }}
             />
             <Stack.Screen
@@ -42,9 +43,9 @@ export default function App() {
               options={{
                 title: "Dashboard",
                 headerStyle: {
-                  backgroundColor: "#FFA400"
+                  backgroundColor: Constants.COLOR.ORANGE
                 },
-                headerTintColor: "#5F4119"
+                headerTintColor: Constants.COLOR.BROWN
               }}
             />
             <Stack.Screen
@@ -53,9 +54,9 @@ export default function App() {
               options={{
                 title: "Fruit Facts",
                 headerStyle: {
-                  backgroundColor: "#FFA400"
+                  backgroundColor: Constants.COLOR.ORANGE
                 },
-                headerTintColor: "#5F4119"
+                headerTintColor: Constants.COLOR.BROWN
               }}
             />
             <Stack.Screen
@@ -64,9 +65,9 @@ export default function App() {
               options={{
                 title: "Contributions",
                 headerStyle: {
-                  backgroundColor: "#FFA400"
+                  backgroundColor: Constants.COLOR.ORANGE
                 },
-                headerTintColor: "#5F4119"
+                headerTintColor: Constants.COLOR.BROWN
               }}
             />
             <Stack.Screen
@@ -75,9 +76,9 @@ export default function App() {
               options={{
                 title: "Recipe",
                 headerStyle: {
-                  backgroundColor: "#FFA400"
+                  backgroundColor: Constants.COLOR.ORANGE
                 },
-                headerTintColor: "#5F4119"
+                headerTintColor: Constants.COLOR.BROWN
               }}
             />
             <Stack.Screen
@@ -86,20 +87,20 @@ export default function App() {
               options={{
                 title: "Recipes",
                 headerStyle: {
-                  backgroundColor: "#FFA400"
+                  backgroundColor: Constants.COLOR.ORANGE
                 },
-                headerTintColor: "#5F4119"
+                headerTintColor: Constants.COLOR.BROWN
               }}
             />
             <Stack.Screen
               name="MainView"
               component={MainView}
               options={{
-                title: "Recipes Book",
+                title: "Food Book",
                 headerStyle: {
-                  backgroundColor: "#FFA400"
+                  backgroundColor: Constants.COLOR.ORANGE
                 },
-                headerTintColor: "#5F4119"
+                headerTintColor: Constants.COLOR.BROWN
               }}
             />
           </Stack.Navigator>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import * as Constants from '../constants'
 
 const Recipe = props => {
   const recipe = props.recipe
@@ -28,7 +29,7 @@ const Recipe = props => {
         )}
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -38,18 +39,17 @@ const styles = StyleSheet.create({
   },
   recipeContainer: {
     flex: 1,
-    justifyContent: "center",
-    borderColor: "#615F4E"
+    justifyContent: "center"
   },
   recipeName: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#494738"
+    color: Constants.COLOR.BROWN_MEDIUM
   },
   recipeDescription: {
     fontSize: 12,
     paddingVertical: 10,
-    color: "#494738",
+    color: Constants.COLOR.BROWN_MEDIUM,
     fontStyle: "italic"
   },
   tag: {
@@ -59,22 +59,22 @@ const styles = StyleSheet.create({
     borderRadius: 20
   },
   recipeTag: {
-    backgroundColor: "#ffe8cf",
-    borderColor: "#ffb959",
+    backgroundColor: Constants.COLOR.ORANGE_TRANSPARENT,
+    borderColor: Constants.COLOR.ORANGE_MEDIUM,
     marginBottom: 20
   },
   contributorsTag: {
-    backgroundColor: "#e5fbb8",
-    borderColor: "#6a9402"
+    backgroundColor: Constants.COLOR.GREEN_LIGHT,
+    borderColor: Constants.COLOR.GREEN
 
   },
   recipeTagText: {
     fontSize: 12,
-    color: "#ffb959"
+    color: Constants.COLOR.ORANGE_MEDIUM
   },
   contributorsTagText: {
     fontSize: 12,
-    color: "#6a9402"
+    color: Constants.COLOR.GREEN
   }
 })
 

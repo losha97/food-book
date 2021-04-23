@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
 import { ErrorService } from '../services/ErrorService'
+import * as Constants from '../constants'
 
 const LoginView = props => {
   const onStart = () => {
@@ -16,7 +17,7 @@ const LoginView = props => {
       <TouchableOpacity style={styles.mainCircle} onPress={onStart}>
         <View style={styles.middleCicrle}>
           <View style={styles.textCicrle}>
-            <Text style={styles.text}>RECIPES</Text>
+            <Text style={styles.text}>START</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -27,13 +28,13 @@ const LoginView = props => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFA400",
+    backgroundColor: Constants.COLOR.ORANGE,
     alignItems: "center",
     justifyContent: "center",
   },
   mainCircle:{
     width: "80%",
-    backgroundColor: "#FFA754",
+    backgroundColor: Constants.COLOR.ORANGE_LIGHT,
     borderRadius: 200 / 2,
     height: 200,
     width: 200,
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   middleCicrle: {
-    backgroundColor: "#FFB088",
+    backgroundColor: Constants.COLOR.PINK_LIGHT,
     borderRadius: 150 / 2,
     height: 150,
     width: 150,
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textCicrle:{
-    backgroundColor: "#FFC0B8",
+    backgroundColor: Constants.COLOR.PINK,
     borderRadius: 100 / 2,
     height: 100,
     width: 100,
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
   },
   text:{
     fontWeight: "bold",
-    color: "#5F4119"
+    color: Constants.COLOR.BROWN
   }
 })
 

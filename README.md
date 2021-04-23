@@ -1,4 +1,4 @@
-# Recipe Book App (React Native App)
+# Food Book App (React Native App)
 
 Install [Expo CLI](https://docs.expo.io/get-started/installation/)
 ### `npm install --global expo-cli`

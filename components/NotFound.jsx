@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import * as Constants from '../constants'
 
 const NotFound = props => {
   const message = props.message
@@ -8,7 +9,7 @@ const NotFound = props => {
     <View style={styles.container}>
       <Text style={styles.message}>{message || 'Not found'}</Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   message: {
-    color: "#494738"
+    color: Constants.COLOR.BROWN_MEDIUM
   }
 })
 

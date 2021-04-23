@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import Dashboard from 'react-native-dashboard';
+import Dashboard from 'react-native-dashboard'
 import { StyleSheet, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { ErrorService } from '../services/ErrorService'
 import { FruitAPI } from '../api/services/FruitAPI'
+import * as Constants from '../constants'
 
 const FruitView = props => {
   const [fruit, setFruit] = useState({});
@@ -21,7 +22,7 @@ const FruitView = props => {
           <View style={styles.fruitView}>
             <TextInput
               placeholder="fruit name"
-              placeholderTextColor="#AC8B67"
+              placeholderTextColor={Constants.COLOR.GRAY}
               autoCapitalize="none"
               autoFocus={true}
               style={styles.fruitName}
@@ -52,7 +53,7 @@ const FruitView = props => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F4F4F4"
+    backgroundColor: Constants.COLOR.GRAY_LIGHT
   },
   scrollContainer: {
     width: "100%"
@@ -66,13 +67,13 @@ const styles = StyleSheet.create({
   description: {
     fontWeight: "bold",
     fontSize: 18,
-    color: "#AC8B67",
+    color: Constants.COLOR.GRAY,
     marginTop: 20,
     marginBottom: 20
   },
   fruitView: {
     width: "90%",
-    backgroundColor: "#DFE0DF",
+    backgroundColor: Constants.COLOR.BROWN_LIGHT,
     borderRadius: 25,
     height: 50,
     marginBottom: 20,
@@ -81,18 +82,18 @@ const styles = StyleSheet.create({
   },
   fruitName: {
     height: 50,
-    color: "#AC8B67"
+    color: Constants.COLOR.GRAY
   },
   submitBtn: {
     width: "90%",
-    backgroundColor: "#FFA400",
+    backgroundColor: Constants.COLOR.ORANGE,
     borderRadius: 25,
     height: 50,
     alignItems: "center",
     justifyContent: "center"
   },
   submitText: {
-    color: "#FFF8F0"
+    color: Constants.COLOR.YELLOW_LIGHT
   },
   fruitBox: {
     width: "90%",
@@ -103,12 +104,12 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   fruitFact: {
-    borderColor: "#AC8B67",
-    color: "#AC8B67"
+    borderColor: Constants.COLOR.GRAY,
+    color: Constants.COLOR.GRAY
   },
   fruitTip: {
-    borderColor: "#FFB088",
-    color: "#FFB088"
+    borderColor: Constants.COLOR.PINK_LIGHT,
+    color: Constants.COLOR.PINK_LIGHT
   }
 })
 

@@ -17,7 +17,7 @@ function ErrorFactory(props) {
   }
 
   function getRequestData() {
-    return requestData;
+    return requestData
   }
 
   function setRequestData(data) {
